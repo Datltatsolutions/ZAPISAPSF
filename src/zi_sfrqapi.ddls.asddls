@@ -60,9 +60,9 @@ define root view entity ZI_SFRQAPI as select from ztsfrqapi as SalesForceRequest
     shipto_cityname,
     billto_cityname,
     register_cityname,
-    
+    changeddatetime,
     @Semantics.systemDateTime.createdAt: true
     created_at,
     @Semantics.systemDateTime.lastChangedAt: true
-    last_changed_at
+    last_changed_at 
 }

@@ -22,8 +22,8 @@ as projection on ZI_SFRQAPI as SalesForceRequestAPI
           @EndUserText.label: 'SalesForce Account ID'
     key salesforceaccountid as SalesForceAccountID,
         @UI: {
-          lineItem:       [ { position: 10, importance: #HIGH, label: 'Auth Token'  }],
-          identification: [ { position: 10, label: 'Auth Token' }, {type: #FOR_ACTION, dataAction: 'ActionUpdateAuthToken', label:'Update Auth Token'} ] }
+          lineItem:       [ { position: 10, importance: #HIGH, label: 'Auth Token'  }, {type: #FOR_ACTION, dataAction: 'ActionUpdateAuthToken', label:'Update Auth Token'}],
+          identification: [ { position: 10, label: 'Auth Token' } ] }
          @Search.defaultSearchElement: true
     authtoken as AuthToken,
     @UI: {
@@ -320,5 +320,10 @@ as projection on ZI_SFRQAPI as SalesForceRequestAPI
           lineItem:       [ { position: 580, importance: #MEDIUM, label: 'Register City Name'  } ],
           identification: [ { position: 580, label: 'Register City Name' } ] }
           @EndUserText.label: 'Register City Name'
-    register_cityname as Register_CityName
+    register_cityname as Register_CityName,
+       @UI: {
+          lineItem:       [ { position: 590, importance: #MEDIUM, label: 'Changed Datetime'  } ],
+          identification: [ { position: 590, label: 'Changed Datetime' } ] }
+          @EndUserText.label: 'Changed Datetime'
+    changeddatetime as Changed_Date_Tme
 } 
